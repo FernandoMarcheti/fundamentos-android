@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Minha Aplicação</string>
+    <string name="hello_world">Olá mundo!</string>
+    <string name="action_settings">Opções</string>
+    <string name="login">Entrar</string>
+    <string name="userName">Usuário</string>
+    <string name="password">Senha</string>
+    <string name="name">Nome</string>
+    <string name="age">Idade</string>
+    <string name="phone">Telefone</string>
+    <string name="address">Endereço</string>
+    <string name="save">Salvar</string>
+    <string name="add">Adicionar</string>
+    <string name="required_field">Campo obrigatório!</string>
+    <string name="success">Sucesso!</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Deletar</string>
+    <string name="confirm_progress">Deseja realmente prosseguir?</string>
+    <string name="confirm">Confirmação</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="cep">Cep</string>
+    <string name="find">Pesquisar</string>
+    <string name="rua">Rua</string>
+    <string name="tipoLogradouro">Tipo Logradouro</string>
+    <string name="bairro">Bairro</string>
+    <string name="cidade">Cidade</string>
+    <string name="estado">Estado</string>
+    <string name="editTextCep">CEP</string>
+</resources>
