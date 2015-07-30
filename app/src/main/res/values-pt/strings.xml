@@ -27,4 +27,5 @@
     <string name="cidade">Cidade</string>
     <string name="estado">Estado</string>
     <string name="editTextCep">CEP</string>
+    <string name="Loading"> Carregando </string>
 </resources>
