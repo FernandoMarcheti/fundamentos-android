@@ -20,7 +20,6 @@
     <string name="yes">Sim</string>
     <string name="no">Não</string>
     <string name="cep">Cep</string>
-    <string name="find">Pesquisar</string>
     <string name="rua">Rua</string>
     <string name="tipoLogradouro">Tipo Logradouro</string>
     <string name="bairro">Bairro</string>
@@ -28,4 +27,8 @@
     <string name="estado">Estado</string>
     <string name="editTextCep">CEP</string>
     <string name="Loading"> Carregando </string>
+    <string name="validate_error">Erro de validação</string>
+    <string name="message">Informação</string>
+    <string name="ok">Ok</string>
+    <string name="compartilhar" />
 </resources>

@@ -95,7 +95,7 @@ public class ClientListActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menuAdd) {
+        if (item.getItemId() == R.id.menuShare) {
             //Intent goToMainActivity = new Intent(ClientListActivity.this, ClientPersistActivity.class);
             //startActivity(goToMainActivity);
             // Create the text message with a string

@@ -28,22 +28,10 @@
             android:hint="@string/phone" />
 
         <EditText
-            android:id="@+id/editTextAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/address" />
-
-        <EditText
             android:id="@+id/editTextCep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/editTextCep" />
-
-        <Button
-            android:id="@+id/buttonFindCep"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/find"/>
 
         <EditText
             android:id="@+id/editTextTipoLogradouro"

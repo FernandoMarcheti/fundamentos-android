@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="@+id/menuAdd"
-        android:icon="@drawable/ic_add"
+        android:id="@+id/menuShare"
+        android:icon="@mipmap/ic_action_social_share"
         android:title="@string/add"
         app:showAsAction="always" />
 

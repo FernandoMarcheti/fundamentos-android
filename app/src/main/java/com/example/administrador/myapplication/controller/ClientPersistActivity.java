@@ -41,7 +41,6 @@ public class ClientPersistActivity extends AppCompatActivity {
     private EditText editTextBairro;
     private EditText editTextCidade;
     private EditText editTextEstado;
-    private Button buttonFindCep;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -74,14 +73,29 @@ public class ClientPersistActivity extends AppCompatActivity {
         });
         editTextAge = (EditText) findViewById(R.id.editTextAge);
         editTextPhone = (EditText) findViewById(R.id.editTextPhone);
-        //editTextAddress = (EditText) findViewById(R.id.editTextAddress);
         editTextCep = (EditText) findViewById(R.id.editTextCep);
+        editTextCep.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_action_toggle_check_box, 0);
+        editTextCep.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                final int DRAWABLE_LEFT = 0;
+                final int DRAWABLE_TOP = 1;
+                final int DRAWABLE_RIGHT = 2;
+                final int DRAWABLE_BOTTOM = 3;
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (event.getRawX() >= (editTextCep.getRight() - editTextCep.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                        new GetAddressByCep().execute(editTextCep.getText().toString());
+                    }
+                }
+                return false;
+            }
+        });
         editTextTipoLogradouro = (EditText) findViewById(R.id.editTextTipoLogradouro);
         editTextLogradouro = (EditText) findViewById(R.id.editTextRua);
         editTextBairro = (EditText) findViewById(R.id.editTextBairro);
         editTextCidade = (EditText) findViewById(R.id.editTextCidade);
         editTextEstado = (EditText) findViewById(R.id.editTextEstado);
-        bindButtonFindCep();
     }
 
     /**
@@ -112,16 +126,6 @@ public class ClientPersistActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void bindButtonFindCep() {
-        buttonFindCep = (Button) findViewById(R.id.buttonFindCep);
-        buttonFindCep.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new GetAddressByCep().execute(editTextCep.getText().toString());
-            }
-        });
-    }
-
     private void getParameters() {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -146,7 +150,6 @@ public class ClientPersistActivity extends AppCompatActivity {
 
             if (FormHelper.requireValidate(ClientPersistActivity.this, editTextName,
                     editTextAge,
-                    //editTextAddress,
                     editTextPhone,
                     editTextCep,
                     editTextTipoLogradouro,
@@ -171,7 +174,6 @@ public class ClientPersistActivity extends AppCompatActivity {
         client.setName(editTextName.getText().toString());
         client.setAge(Integer.valueOf(editTextAge.getText().toString()));
         client.setPhone(editTextPhone.getText().toString());
-        //client.setAddress( editTextAddress.getText().toString());
         client.setCep(editTextCep.getText().toString());
         client.setTipoDeLogradouro(editTextTipoLogradouro.getText().toString());
         client.setLogradouro(editTextLogradouro.getText().toString());
@@ -184,7 +186,6 @@ public class ClientPersistActivity extends AppCompatActivity {
         editTextName.setText(client.getName());
         editTextAge.setText(client.getAge().toString());
         editTextPhone.setText(client.getPhone());
-        //editTextAddress.setText(client.getAddress());
         editTextCep.setText(client.getCep());
         editTextTipoLogradouro.setText(client.getTipoDeLogradouro());
         editTextLogradouro.setText(client.getLogradouro());

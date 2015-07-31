@@ -52,7 +52,6 @@ public class ClientContract {
         values.put(ClientContract.NAME, client.getName());
         values.put(ClientContract.AGE, client.getAge());
         values.put(ClientContract.PHONE, client.getPhone());
-        //values.put(ClientContract.ADDRESS, client.getAddress());
         values.put(ClientContract.CEP, client.getCep());
         values.put(ClientContract.TIPO_DE_LOGRADOURO, client.getTipoDeLogradouro());
         values.put(ClientContract.LOGRADOURO, client.getLogradouro());
@@ -69,7 +68,6 @@ public class ClientContract {
             client.setName(cursor.getString(cursor.getColumnIndex(ClientContract.NAME)));
             client.setAge(cursor.getInt(cursor.getColumnIndex(ClientContract.AGE)));
             client.setPhone(cursor.getString(cursor.getColumnIndex(ClientContract.PHONE)));
-            //client.setAddress(cursor.getString(cursor.getColumnIndex(ClientContract.ADDRESS)));
             client.setCep(cursor.getString(cursor.getColumnIndex(ClientContract.CEP)));
             client.setTipoDeLogradouro(cursor.getString(cursor.getColumnIndex(ClientContract.TIPO_DE_LOGRADOURO)));
             client.setLogradouro(cursor.getString(cursor.getColumnIndex(ClientContract.LOGRADOURO)));
